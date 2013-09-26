@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="13A510d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Pxb-db-V9M">
+    <dependencies>
+        <development version="4600" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller - 居家小幫手-->
+        <scene sceneID="fVq-FO-D34">
+            <objects>
+                <navigationController title="居家小幫手" definesPresentationContext="YES" id="Pxb-db-V9M" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="Jjs-gE-RUJ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="D1d-E1-FK5" kind="relationship" relationship="rootViewController" id="8cP-rz-Mcy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ATE-wO-abD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1861" y="128"/>
+        </scene>
+        <!--Login View Controller - 居家系統登入頁面-->
+        <scene sceneID="WNs-hx-uok">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" id="D1d-E1-FK5" customClass="LoginViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MP0-vo-7G9" customClass="UIControl">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qWZ-j9-lcy">
+                                <rect key="frame" x="99" y="277" width="123" height="96"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
+                                <state key="normal" backgroundImage="loginbutton.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Login:" destination="D1d-E1-FK5" eventType="touchUpInside" id="UT1-bx-Qzn"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" id="JT0-HK-EBH">
+                                <rect key="frame" x="10" y="58" width="300" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" id="49G-2B-g8n">
+                                <rect key="frame" x="10" y="151" width="300" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <connections>
+                            <action selector="closeKeyboard:" destination="D1d-E1-FK5" eventType="touchUpInside" id="eqE-cF-FsR"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="居家系統登入頁面" id="enu-Wd-sTd"/>
+                    <connections>
+                        <outlet property="email" destination="JT0-HK-EBH" id="Bub-N0-LNk"/>
+                        <outlet property="password" destination="49G-2B-g8n" id="iOL-7p-mmd"/>
+                        <segue destination="dmE-Kn-TpH" kind="push" identifier="LoginView" id="XhD-IT-vkc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R84-iU-deB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1439" y="134"/>
+        </scene>
+        <!--View Controller - 居家小幫手-->
+        <scene sceneID="Vy6-Ll-qpW">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" title="居家小幫手" id="dmE-Kn-TpH" customClass="ViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="esX-eC-dy5">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="v3l-BR-o28">
+                            <size key="itemSize" width="153" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellID" id="85c-5p-sGb" customClass="Cell">
+                                <rect key="frame" x="0.0" y="0.0" width="153" height="128"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="153" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9IX-OE-Trn">
+                                            <rect key="frame" x="0.0" y="109" width="153" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="MGy-P6-tia">
+                                            <rect key="frame" x="20" y="6" width="113" height="102"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <outlet property="image" destination="MGy-P6-tia" id="xfE-Pm-iCH"/>
+                                    <outlet property="label" destination="9IX-OE-Trn" id="DZ5-WF-dqy"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="dmE-Kn-TpH" id="c0f-gq-Hbq"/>
+                            <outlet property="delegate" destination="dmE-Kn-TpH" id="pKl-zO-lPR"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="居家小幫手" id="Qqd-gG-ZaX"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <connections>
+                        <segue destination="k4j-Q3-k4D" kind="push" identifier="CameraViewController" id="zh6-NP-lzE"/>
+                        <segue destination="3Vw-jP-P78" kind="push" identifier="WebSocketController" id="WVo-N3-nuq"/>
+                        <segue destination="yes-1y-fZZ" kind="push" identifier="SettingViewController" id="FQq-dG-0Qi"/>
+                        <segue destination="aQZ-AC-yp4" kind="push" identifier="MemberView" id="27d-ca-NaG"/>
+                        <segue destination="um9-IF-c0K" kind="push" identifier="BoardView" id="8Zk-0f-8ca"/>
+                        <segue destination="fjZ-gC-qbP" kind="push" identifier="GraphView" id="9WT-bL-xjG"/>
+                        <segue destination="WdE-te-yCy" kind="push" identifier="DynamicViewController" id="Ujx-h4-zxr"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2FN-eK-xyQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1039" y="128"/>
+        </scene>
+        <!--Board View Controller-->
+        <scene sceneID="FxD-yC-VXw">
+            <objects>
+                <viewController id="um9-IF-c0K" customClass="BoardViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZjC-OL-E1E">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="7s1-AN-v8M">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BAv-Xh-x6A">
+                        <barButtonItem key="rightBarButtonItem" title="reload" id="jvS-Gg-4Kh">
+                            <connections>
+                                <action selector="reload_web:" destination="um9-IF-c0K" id="h88-L6-qdu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="web_view" destination="7s1-AN-v8M" id="Dg6-zb-gcD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="76e-BD-4GL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1367" y="824"/>
+        </scene>
+        <!--Member View Controller - 成員-->
+        <scene sceneID="AaR-Ac-Zkn">
+            <objects>
+                <viewController id="aQZ-AC-yp4" customClass="Member_ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EdP-PK-gT5">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="hB4-sf-YFS">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="成員" id="0Ym-Ad-yfY"/>
+                    <connections>
+                        <outlet property="member_webview" destination="hB4-sf-YFS" id="DSQ-az-Sye"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7j3-vW-frn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-972" y="-492"/>
+        </scene>
+        <!--Camera View Controller - 即時影像-->
+        <scene sceneID="ECe-xs-OmS">
+            <objects>
+                <viewController storyboardIdentifier="CameraView" modalTransitionStyle="crossDissolve" id="k4j-Q3-k4D" customClass="CameraViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="71J-Fk-FV9">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="mYL-BG-Ff4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="gray" id="6eA-Hu-mlh">
+                                <rect key="frame" x="74" y="184" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="載入中" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eHw-Qy-SX4">
+                                <rect key="frame" x="110" y="163" width="177" height="62"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                                <color key="textColor" red="0.059509983789999998" green="1" blue="0.74019502940000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="即時影像" id="17A-C3-GFB">
+                        <barButtonItem key="rightBarButtonItem" title="reload" id="INL-q5-aWc">
+                            <connections>
+                                <action selector="reload:" destination="k4j-Q3-k4D" id="F7a-80-PGX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="Camera_View" destination="mYL-BG-Ff4" id="kpL-Vk-fvd"/>
+                        <outlet property="load_status" destination="eHw-Qy-SX4" id="d7F-kE-2qL"/>
+                        <outlet property="web_activity" destination="6eA-Hu-mlh" id="ZpM-2L-Tq4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YbT-Xk-ajV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-589" y="-80"/>
+        </scene>
+        <!--Setting View Controller - 系統設定-->
+        <scene sceneID="DLG-hK-xEo">
+            <objects>
+                <viewController storyboardIdentifier="SettingView" title="系統設定" id="yes-1y-fZZ" customClass="SettingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zUu-c2-XrO">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="tempipad.jpg" id="qdA-7R-lGa">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="163.13.x.x" borderStyle="roundedRect" placeholder="IP" minimumFontSize="17" id="RJp-x0-hEv">
+                                <rect key="frame" x="79" y="219" width="163" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tIA-F7-A31">
+                                <rect key="frame" x="152" y="344" width="59" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name:peterlee" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oku-oQ-cQM">
+                                <rect key="frame" x="36" y="25" width="151" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="peterlee0127@gmail.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qAo-sx-nwI">
+                                <rect key="frame" x="36" y="83" width="249" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Group: admin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vhG-3B-wz3">
+                                <rect key="frame" x="36" y="142" width="135" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="設定" id="Zdd-UP-FNp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ve1-DA-WiN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-868" y="829"/>
+        </scene>
+        <!--Web Socket View Controller - 即時資料-->
+        <scene sceneID="14R-O7-2Dt">
+            <objects>
+                <viewController id="3Vw-jP-P78" customClass="WebSocketViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cyb-dV-Pxg">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tempipad.jpg" id="qB0-lo-QCy">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="loading" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uNF-AL-wRG">
+                                <rect key="frame" x="39" y="65" width="261" height="73"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="loading" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qJp-I3-kMS">
+                                <rect key="frame" x="39" y="166" width="256" height="59"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="loading" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YGk-WQ-wAN">
+                                <rect key="frame" x="39" y="233" width="256" height="78"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5JD-79-fWN">
+                                <rect key="frame" x="176" y="238" width="117" height="51"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="Baru播放器" backgroundImage="logout.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="CV5-J7-fMf" kind="push" id="EBr-bn-mjF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rgm-fj-sKe">
+                                <rect key="frame" x="176" y="156" width="119" height="45"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="電風扇" backgroundImage="logout.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ouM-Wt-uCF" kind="push" id="oeA-Vb-7Jn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HIL-kL-27n">
+                                <rect key="frame" x="176" y="87" width="119" height="46"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="DVD播放器" backgroundImage="logout.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Npd-3c-Nwj" kind="push" id="oCj-8P-MiK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="即時資料" id="dPD-ks-1Ff"/>
+                    <connections>
+                        <outlet property="humidity" destination="YGk-WQ-wAN" id="Fyr-uJ-YOy"/>
+                        <outlet property="light" destination="qJp-I3-kMS" id="lgf-Sw-7RX"/>
+                        <outlet property="temp" destination="uNF-AL-wRG" id="jS2-im-LAC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PBO-Fm-bMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-479" y="1092"/>
+        </scene>
+        <!--Fan View Controller - 電風扇-->
+        <scene sceneID="zfp-fU-rI9">
+            <objects>
+                <viewController id="ouM-Wt-uCF" customClass="FanViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BkB-DZ-VEt">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="37q-7J-L1I">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="電風扇" id="805-Ti-qtl">
+                        <barButtonItem key="rightBarButtonItem" title="reload" id="G8A-AB-WSY">
+                            <connections>
+                                <action selector="reload:" destination="ouM-Wt-uCF" id="uyl-dz-fil"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="fan_webview" destination="37q-7J-L1I" id="Yao-Jw-Juo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n8f-3N-27C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-418" y="1645"/>
+        </scene>
+        <!--View Controller - DVD播放器-->
+        <scene sceneID="6dm-kK-EiT">
+            <objects>
+                <viewController id="Npd-3c-Nwj" customClass="DVDViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rOH-TO-Tl2">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="Zd0-Pr-yEU">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="DVD播放器" id="2WZ-hL-zuo">
+                        <barButtonItem key="rightBarButtonItem" title="reload" id="rvw-hC-aRY">
+                            <connections>
+                                <action selector="reload:" destination="Npd-3c-Nwj" id="Owi-BJ-4uj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="dvd_webview" destination="Zd0-Pr-yEU" id="XFM-uR-HsH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GyC-kH-UkR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-53" y="1645"/>
+        </scene>
+        <!--Baru Remote View Controller - Baru播放器-->
+        <scene sceneID="EF7-Pw-rP7">
+            <objects>
+                <viewController id="CV5-J7-fMf" customClass="Baru_RemoteViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="snc-ft-3we">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="ide-sz-H2v">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Baru播放器" id="eB1-No-lHs">
+                        <barButtonItem key="rightBarButtonItem" title="reload" id="42j-f1-8d0">
+                            <connections>
+                                <action selector="reloadweb:" destination="CV5-J7-fMf" id="7NA-2f-5ON"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="baru_remote_webview" destination="ide-sz-H2v" id="FEc-NL-egL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fH4-kD-HVQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-24" y="1034"/>
+        </scene>
+        <!--Graph View Controller - 圖表-->
+        <scene sceneID="Ych-Wo-iPL">
+            <objects>
+                <viewController storyboardIdentifier="GraphView" modalTransitionStyle="crossDissolve" id="fjZ-gC-qbP" customClass="GraphViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bKD-HP-T0W">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="4Ec-TG-6Jx">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="372"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="gray" id="ssi-g2-DBN">
+                                <rect key="frame" x="74" y="184" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="載入中" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yst-cp-Dsx">
+                                <rect key="frame" x="110" y="163" width="177" height="62"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                                <color key="textColor" red="0.059509983789999998" green="1" blue="0.74019502940000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" id="Bx9-lU-7e3">
+                                <rect key="frame" x="0.0" y="372" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="溫度" id="lIX-yy-2N7">
+                                        <connections>
+                                            <action selector="set_Temp:" destination="fjZ-gC-qbP" id="0KM-4m-0Rf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="光線" id="Jz3-QO-pqH">
+                                        <connections>
+                                            <action selector="set_light:" destination="fjZ-gC-qbP" id="nUg-xc-vRr"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="濕度" id="Pfz-8f-6cB">
+                                        <connections>
+                                            <action selector="set_Humidity:" destination="fjZ-gC-qbP" id="fQq-9E-DO1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="圖表" id="JGF-9A-XjR">
+                        <barButtonItem key="rightBarButtonItem" title="reload" id="xYr-da-wng">
+                            <connections>
+                                <action selector="reload:" destination="fjZ-gC-qbP" id="HQr-Kt-gkw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="Camera_View" destination="4Ec-TG-6Jx" id="Qg5-iX-ej0"/>
+                        <outlet property="load_status" destination="yst-cp-Dsx" id="Wdw-ce-xI6"/>
+                        <outlet property="web_activity" destination="ssi-g2-DBN" id="uI1-v5-bgE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fgx-ec-LJa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-468" y="507"/>
+        </scene>
+        <!--Dynamic View Controller - 動態圖表-->
+        <scene sceneID="Fjj-lm-7Nr">
+            <objects>
+                <viewController storyboardIdentifier="DynamicView" modalTransitionStyle="crossDissolve" id="WdE-te-yCy" customClass="DynamicViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gUg-bO-jMD">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="aTq-L3-ydj">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="372"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="gray" id="l2q-pH-7Nm">
+                                <rect key="frame" x="74" y="184" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="載入中" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="L3e-QX-Blx">
+                                <rect key="frame" x="110" y="163" width="177" height="62"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                                <color key="textColor" red="0.059509983789999998" green="1" blue="0.74019502940000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" id="zMv-2z-y1w">
+                                <rect key="frame" x="0.0" y="372" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="溫度" id="fGO-0p-ARR">
+                                        <connections>
+                                            <action selector="set_Temp:" destination="WdE-te-yCy" id="NUS-Xj-5j1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="光線" id="Je9-eG-22p">
+                                        <connections>
+                                            <action selector="set_light:" destination="WdE-te-yCy" id="skE-bC-896"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="濕度" id="BFB-CY-gdF">
+                                        <connections>
+                                            <action selector="set_Humidity:" destination="WdE-te-yCy" id="4wR-S5-oIf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="動態圖表" id="e26-pj-bPR">
+                        <barButtonItem key="rightBarButtonItem" title="reload" id="Z0e-mU-A0y">
+                            <connections>
+                                <action selector="reload:" destination="WdE-te-yCy" id="LDl-Ce-58E"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="Camera_View" destination="aTq-L3-ydj" id="INi-sP-ugI"/>
+                        <outlet property="load_status" destination="L3e-QX-Blx" id="ig2-bw-78C"/>
+                        <outlet property="web_activity" destination="l2q-pH-7Nm" id="yxo-rV-cXP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wOC-RW-VZg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1806" y="840"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="loginbutton.png" width="143" height="114"/>
+        <image name="logout.png" width="339" height="46"/>
+        <image name="tempipad.jpg" width="1024" height="768"/>
+    </resources>
+    <classes>
+        <class className="Baru_RemoteViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/Baru_RemoteViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="baru_remote_webview" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="BoardViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BoardViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="web_view" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="CameraViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CameraViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="Camera_View" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="load_status" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="web_activity" candidateClass="UIActivityIndicatorView"/>
+            </relationships>
+        </class>
+        <class className="Cell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/Cell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="image" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="DVDViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DVDViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="reload:"/>
+                <relationship kind="outlet" name="dvd_webview" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="DynamicViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DynamicViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="reload:"/>
+                <relationship kind="action" name="set_Humidity:"/>
+                <relationship kind="action" name="set_Temp:"/>
+                <relationship kind="action" name="set_light:"/>
+                <relationship kind="outlet" name="Camera_View" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="load_status" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="web_activity" candidateClass="UIActivityIndicatorView"/>
+            </relationships>
+        </class>
+        <class className="FanViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FanViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="fan_webview" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="GraphViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="Camera_View" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="load_status" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="web_activity" candidateClass="UIActivityIndicatorView"/>
+            </relationships>
+        </class>
+        <class className="LoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="email" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="password" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="Member_ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/Member_ViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="member_webview" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="SettingViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingViewController.h"/>
+        </class>
+        <class className="UICollectionReusableView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
+        </class>
+        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
+        </class>
+        <class className="UICollectionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewController.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="ViewController" superclassName="UICollectionViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+        </class>
+        <class className="WebSocketViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WebSocketViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="humidity" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="light" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="temp" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
