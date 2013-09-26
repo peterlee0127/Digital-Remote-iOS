@@ -155,6 +155,7 @@
 		D0026538173151BB00722C0B /* dynamic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dynamic.png; sourceTree = "<group>"; };
 		D00B91C71730F82C0074FF8F /* DynamicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicViewController.h; sourceTree = "<group>"; };
 		D00B91C81730F82C0074FF8F /* DynamicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicViewController.m; sourceTree = "<group>"; };
+		D00ECBAC17F3D75F0044AB52 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		D018E119172057580059A0B5 /* WebSocketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebSocketViewController.h; sourceTree = "<group>"; };
 		D018E11A172057580059A0B5 /* WebSocketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebSocketViewController.m; sourceTree = "<group>"; };
 		D018E11C17205B9B0059A0B5 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "../Icon-72.png"; sourceTree = "<group>"; };
@@ -430,6 +431,7 @@
 				D0EF5A8517208AAF001CE89A /* View */,
 				53C4ED44159E740C0019285D /* AppDelegate.h */,
 				53C4ED45159E740C0019285D /* AppDelegate.m */,
+				D00ECBAC17F3D75F0044AB52 /* Config.h */,
 				53C4ED4A159E740D0019285D /* ViewController.h */,
 				53C4ED4B159E740D0019285D /* ViewController.m */,
 				53C4ED52159E75F40019285D /* Cell.h */,

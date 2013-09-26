@@ -64,10 +64,7 @@
     
     [self.web_activity startAnimating];
     
-    //    NSString *urlAddress = @"https://163.13.128.176:8080/nowtemp";
-    
-    
-    
+     
     
     //Create a URL object.
     NSURL *url = [NSURL URLWithString:dy_urlAddress];

@@ -8,8 +8,12 @@
 
 #import "GraphViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "Config.h"
 
- NSString *urlAddress = @"https://admin:admin@163.13.143.211:8080/yes_temp";
+
+NSString *urlAddress =GraphHostname;
+//@"";
+                
 /*
 
 @implementation NSURLRequest (NSURLRequestWithIgnoreSSL)
@@ -80,17 +84,19 @@
 }
 -(IBAction)set_Temp:(id)sender
 {
-    urlAddress = @"https://admin:admin@163.13.143.211:8080/yes_temp";
+    urlAddress =[NSString stringWithFormat:@"%@/yes_temp",Hostname];
+
     [self loadWeb];
 }
 -(IBAction)set_light:(id)sender
 {
-    urlAddress = @"https://admin:admin@163.13.143.211:8080/yes_light";
+    urlAddress =[NSString stringWithFormat:@"%@/yes_light",Hostname];
+  
      [self loadWeb];
 }
 -(IBAction)set_Humidity:(id)sender
 {
-    urlAddress = @"https://admin:admin@163.13.143.211:8080/yes_hum";
+    urlAddress =[NSString stringWithFormat:@"%@/yes_hum",Hostname];
      [self loadWeb];
 }
 -(void) viewDidDisappear:(BOOL)animated

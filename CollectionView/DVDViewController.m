@@ -5,7 +5,7 @@
 //  Created by Peter Lee on 5/8/13.
 //
 //
-
+#import "Config.h"
 #import "DVDViewController.h"
 
 @interface DVDViewController ()
@@ -32,7 +32,8 @@
 -(void )loadweb
 {
     
-    NSString *urlAddress = @"http://163.13.143.212:8080/remote_dvd";
+    NSString *urlAddress =[NSString stringWithFormat:@"%@/remote_dvd",Hostname];
+
     
     
     //Create a URL object.

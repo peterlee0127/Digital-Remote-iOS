@@ -7,6 +7,7 @@
 //
 
 #import "FanViewController.h"
+#import "Config.h"
 
 @interface FanViewController ()
 
@@ -35,7 +36,7 @@
 -(void )loadweb
 {
     
-    NSString *urlAddress = @"http://163.13.143.212:8080/remote_fan";
+    NSString *urlAddress = [NSString stringWithFormat:@"%@/remote_fan",Hostname];
     
     
     //Create a URL object.

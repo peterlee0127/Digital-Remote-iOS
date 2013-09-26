@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "DataSave.h"
+#import "Config.h"
 
 @interface LoginViewController ()
 
@@ -145,7 +146,7 @@
     }
     else
     {
-        MKNetworkEngine *engine = [[MKNetworkEngine alloc] initWithHostName:@"163.13.128.173:8080" customHeaderFields:nil];
+        MKNetworkEngine *engine = [[MKNetworkEngine alloc] initWithHostName:Hostname customHeaderFields:nil];
       
         
         NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:

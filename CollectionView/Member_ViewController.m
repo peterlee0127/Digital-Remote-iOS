@@ -7,6 +7,7 @@
 //
 
 #import "Member_ViewController.h"
+#import "Config.h"
 
 @interface Member_ViewController ()
 
@@ -43,7 +44,7 @@
 -(void) loadWeb
 {
     
-    NSString *urlAddress = @"http://163.13.143.211:8001/";
+    NSString *urlAddress = memberHostname;
     
     
     //Create a URL object.

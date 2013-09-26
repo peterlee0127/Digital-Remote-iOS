@@ -7,6 +7,7 @@
 //
 
 #import "Baru_RemoteViewController.h"
+#import "Config.h"
 
 @interface Baru_RemoteViewController ()
 
@@ -37,8 +38,7 @@
 -(void) loadWeb
 {
     
-    NSString *urlAddress = @"http://163.13.143.212:8080/remote_baru";
-    
+    NSString *urlAddress =   [NSString stringWithFormat:@"%@/remote_baru",Hostname];
     
     //Create a URL object.
     NSURL *url = [NSURL URLWithString:urlAddress];

@@ -7,6 +7,7 @@
 //
 
 #import "BoardViewController.h"
+#import "Config.h"
 
 @interface BoardViewController ()
 
@@ -39,7 +40,7 @@
 -(void) loadWeb
 {
     
-    NSString *urlAddress = @"http://163.13.128.173:8080/board";
+    NSString *urlAddress = [NSString stringWithFormat:@"%@/board",Hostname];
     
     
     //Create a URL object.

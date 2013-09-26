@@ -8,7 +8,7 @@
 
 #import "CameraViewController.h"
 #import <QuartzCore/QuartzCore.h>
-
+#import "Config.h"
 
 
 @interface CameraViewController ()
@@ -58,10 +58,9 @@
     
     [self.web_activity startAnimating];
     
-    NSString *urlAddress = @"http://163.13.143.212:8081/javascript_simple.html";
+    NSString *urlAddress =  [NSString stringWithFormat:@"%@/javascript_simple.html",Hostname];
     
-  //  NSString *urlAddress = @"https://admin:admin@163.13.128.176:8080/";
-    
+
     
     //Create a URL object.
     NSURL *url = [NSURL URLWithString:urlAddress];
