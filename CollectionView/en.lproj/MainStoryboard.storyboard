@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="13A510d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Pxb-db-V9M">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Pxb-db-V9M">
     <dependencies>
-        <development version="4600" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller - 居家小幫手-->
         <scene sceneID="fVq-FO-D34">
             <objects>
                 <navigationController title="居家小幫手" definesPresentationContext="YES" id="Pxb-db-V9M" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="Jjs-gE-RUJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="Jjs-gE-RUJ">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -25,30 +25,26 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" id="D1d-E1-FK5" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MP0-vo-7G9" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qWZ-j9-lcy">
-                                <rect key="frame" x="99" y="277" width="123" height="96"/>
+                                <rect key="frame" x="99" y="332" width="123" height="96"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
                                 <state key="normal" backgroundImage="loginbutton.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="Login:" destination="D1d-E1-FK5" eventType="touchUpInside" id="UT1-bx-Qzn"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" id="JT0-HK-EBH">
-                                <rect key="frame" x="10" y="58" width="300" height="50"/>
+                                <rect key="frame" x="10" y="68" width="300" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" id="49G-2B-g8n">
-                                <rect key="frame" x="10" y="151" width="300" height="50"/>
+                                <rect key="frame" x="10" y="177" width="300" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
@@ -74,7 +70,7 @@
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" title="居家小幫手" id="dmE-Kn-TpH" customClass="ViewController" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="esX-eC-dy5">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="v3l-BR-o28">
                             <size key="itemSize" width="153" height="128"/>
@@ -115,7 +111,7 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="居家小幫手" id="Qqd-gG-ZaX"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <connections>
                         <segue destination="k4j-Q3-k4D" kind="push" identifier="CameraViewController" id="zh6-NP-lzE"/>
                         <segue destination="3Vw-jP-P78" kind="push" identifier="WebSocketController" id="WVo-N3-nuq"/>
@@ -135,11 +131,11 @@
             <objects>
                 <viewController id="um9-IF-c0K" customClass="BoardViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZjC-OL-E1E">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" id="7s1-AN-v8M">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="32" width="320" height="416"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
@@ -165,11 +161,11 @@
             <objects>
                 <viewController id="aQZ-AC-yp4" customClass="Member_ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EdP-PK-gT5">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" id="hB4-sf-YFS">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="32" width="320" height="416"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
@@ -189,18 +185,18 @@
             <objects>
                 <viewController storyboardIdentifier="CameraView" modalTransitionStyle="crossDissolve" id="k4j-Q3-k4D" customClass="CameraViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="71J-Fk-FV9">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" id="mYL-BG-Ff4">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="32" width="320" height="416"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="gray" id="6eA-Hu-mlh">
-                                <rect key="frame" x="74" y="184" width="20" height="20"/>
+                                <rect key="frame" x="74" y="213" width="20" height="20"/>
                             </activityIndicatorView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="載入中" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eHw-Qy-SX4">
-                                <rect key="frame" x="110" y="163" width="177" height="62"/>
+                                <rect key="frame" x="110" y="192" width="177" height="62"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
                                 <color key="textColor" red="0.059509983789999998" green="1" blue="0.74019502940000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -230,40 +226,35 @@
             <objects>
                 <viewController storyboardIdentifier="SettingView" title="系統設定" id="yes-1y-fZZ" customClass="SettingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zUu-c2-XrO">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="tempipad.jpg" id="qdA-7R-lGa">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="32" width="320" height="416"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="163.13.x.x" borderStyle="roundedRect" placeholder="IP" minimumFontSize="17" id="RJp-x0-hEv">
-                                <rect key="frame" x="79" y="219" width="163" height="30"/>
+                                <rect key="frame" x="79" y="255" width="163" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tIA-F7-A31">
-                                <rect key="frame" x="152" y="344" width="59" height="44"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <rect key="frame" x="164" y="409" width="34" height="30"/>
                                 <state key="normal" title="Save">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name:peterlee" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oku-oQ-cQM">
-                                <rect key="frame" x="36" y="25" width="151" height="40"/>
+                                <rect key="frame" x="36" y="29" width="151" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="peterlee0127@gmail.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qAo-sx-nwI">
-                                <rect key="frame" x="36" y="83" width="249" height="37"/>
+                                <rect key="frame" x="36" y="97" width="249" height="37"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Group: admin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vhG-3B-wz3">
-                                <rect key="frame" x="36" y="142" width="135" height="42"/>
+                                <rect key="frame" x="36" y="166" width="135" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -281,64 +272,52 @@
             <objects>
                 <viewController id="3Vw-jP-P78" customClass="WebSocketViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cyb-dV-Pxg">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tempipad.jpg" id="qB0-lo-QCy">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="32" width="320" height="416"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="loading" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uNF-AL-wRG">
-                                <rect key="frame" x="39" y="65" width="261" height="73"/>
+                                <rect key="frame" x="39" y="77" width="261" height="73"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="loading" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qJp-I3-kMS">
-                                <rect key="frame" x="39" y="166" width="256" height="59"/>
+                                <rect key="frame" x="39" y="196" width="256" height="59"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="loading" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YGk-WQ-wAN">
-                                <rect key="frame" x="39" y="233" width="256" height="78"/>
+                                <rect key="frame" x="39" y="277" width="256" height="78"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5JD-79-fWN">
-                                <rect key="frame" x="176" y="238" width="117" height="51"/>
+                                <rect key="frame" x="176" y="279" width="117" height="51"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <state key="normal" title="Baru播放器" backgroundImage="logout.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="CV5-J7-fMf" kind="push" id="EBr-bn-mjF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rgm-fj-sKe">
-                                <rect key="frame" x="176" y="156" width="119" height="45"/>
+                                <rect key="frame" x="176" y="182" width="119" height="45"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <state key="normal" title="電風扇" backgroundImage="logout.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="ouM-Wt-uCF" kind="push" id="oeA-Vb-7Jn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HIL-kL-27n">
-                                <rect key="frame" x="176" y="87" width="119" height="46"/>
+                                <rect key="frame" x="176" y="102" width="119" height="46"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <state key="normal" title="DVD播放器" backgroundImage="logout.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="Npd-3c-Nwj" kind="push" id="oCj-8P-MiK"/>
@@ -363,11 +342,11 @@
             <objects>
                 <viewController id="ouM-Wt-uCF" customClass="FanViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BkB-DZ-VEt">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" id="37q-7J-L1I">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="32" width="320" height="416"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
@@ -393,11 +372,11 @@
             <objects>
                 <viewController id="Npd-3c-Nwj" customClass="DVDViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rOH-TO-Tl2">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" id="Zd0-Pr-yEU">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="32" width="320" height="416"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
@@ -423,11 +402,11 @@
             <objects>
                 <viewController id="CV5-J7-fMf" customClass="Baru_RemoteViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="snc-ft-3we">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" id="ide-sz-H2v">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="32" width="320" height="416"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
@@ -453,24 +432,24 @@
             <objects>
                 <viewController storyboardIdentifier="GraphView" modalTransitionStyle="crossDissolve" id="fjZ-gC-qbP" customClass="GraphViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bKD-HP-T0W">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" id="4Ec-TG-6Jx">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="372"/>
+                                <rect key="frame" x="0.0" y="108" width="320" height="372"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="gray" id="ssi-g2-DBN">
-                                <rect key="frame" x="74" y="184" width="20" height="20"/>
+                                <rect key="frame" x="74" y="213" width="20" height="20"/>
                             </activityIndicatorView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="載入中" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yst-cp-Dsx">
-                                <rect key="frame" x="110" y="163" width="177" height="62"/>
+                                <rect key="frame" x="110" y="192" width="177" height="62"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
                                 <color key="textColor" red="0.059509983789999998" green="1" blue="0.74019502940000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" id="Bx9-lU-7e3">
-                                <rect key="frame" x="0.0" y="372" width="320" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" id="Bx9-lU-7e3">
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
                                 <items>
                                     <barButtonItem title="溫度" id="lIX-yy-2N7">
                                         <connections>
@@ -514,24 +493,24 @@
             <objects>
                 <viewController storyboardIdentifier="DynamicView" modalTransitionStyle="crossDissolve" id="WdE-te-yCy" customClass="DynamicViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gUg-bO-jMD">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" id="aTq-L3-ydj">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="372"/>
+                                <rect key="frame" x="0.0" y="108" width="320" height="372"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="gray" id="l2q-pH-7Nm">
-                                <rect key="frame" x="74" y="184" width="20" height="20"/>
+                                <rect key="frame" x="74" y="213" width="20" height="20"/>
                             </activityIndicatorView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="載入中" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="L3e-QX-Blx">
-                                <rect key="frame" x="110" y="163" width="177" height="62"/>
+                                <rect key="frame" x="110" y="192" width="177" height="62"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
                                 <color key="textColor" red="0.059509983789999998" green="1" blue="0.74019502940000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" id="zMv-2z-y1w">
-                                <rect key="frame" x="0.0" y="372" width="320" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" id="zMv-2z-y1w">
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
                                 <items>
                                     <barButtonItem title="溫度" id="fGO-0p-ARR">
                                         <connections>
@@ -576,107 +555,6 @@
         <image name="logout.png" width="339" height="46"/>
         <image name="tempipad.jpg" width="1024" height="768"/>
     </resources>
-    <classes>
-        <class className="Baru_RemoteViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/Baru_RemoteViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="baru_remote_webview" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="BoardViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BoardViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="web_view" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="CameraViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CameraViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="Camera_View" candidateClass="UIWebView"/>
-                <relationship kind="outlet" name="load_status" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="web_activity" candidateClass="UIActivityIndicatorView"/>
-            </relationships>
-        </class>
-        <class className="Cell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/Cell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="image" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="DVDViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DVDViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="reload:"/>
-                <relationship kind="outlet" name="dvd_webview" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="DynamicViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DynamicViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="reload:"/>
-                <relationship kind="action" name="set_Humidity:"/>
-                <relationship kind="action" name="set_Temp:"/>
-                <relationship kind="action" name="set_light:"/>
-                <relationship kind="outlet" name="Camera_View" candidateClass="UIWebView"/>
-                <relationship kind="outlet" name="load_status" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="web_activity" candidateClass="UIActivityIndicatorView"/>
-            </relationships>
-        </class>
-        <class className="FanViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FanViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="fan_webview" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="GraphViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="Camera_View" candidateClass="UIWebView"/>
-                <relationship kind="outlet" name="load_status" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="web_activity" candidateClass="UIActivityIndicatorView"/>
-            </relationships>
-        </class>
-        <class className="LoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="email" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="password" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="Member_ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/Member_ViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="member_webview" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="SettingViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingViewController.h"/>
-        </class>
-        <class className="UICollectionReusableView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
-        </class>
-        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
-        </class>
-        <class className="UICollectionViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewController.h"/>
-        </class>
-        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="ViewController" superclassName="UICollectionViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-        </class>
-        <class className="WebSocketViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WebSocketViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="humidity" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="light" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="temp" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

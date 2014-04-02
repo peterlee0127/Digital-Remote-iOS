@@ -55,7 +55,7 @@
     self.token = [tempToken stringByReplacingOccurrencesOfString:@"<" withString:@""];
     self.token = [self.token stringByReplacingOccurrencesOfString:@">" withString:@""];
     self.token = [[self.token componentsSeparatedByString:@" "] componentsJoinedByString:@"" ];
-  //  NSLog(@"got string token %@", self.token);
+    NSLog(@"got string token %@", self.token);
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
