@@ -81,6 +81,7 @@
     NSLog(@"Badge: %@", [[userInfo objectForKey:@"aps"] objectForKey:@"badge"]);
     
 }
+
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
     
     [UIApplication sharedApplication].applicationIconBadgeNumber=application.applicationIconBadgeNumber-1;
